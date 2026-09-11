@@ -43,7 +43,7 @@ SCOTTISH LEGAL TEXT:
 QUESTION: {question}
 ANSWER:"""
 
-            response = ollama.chat(model="phi3", messages=[{"role":"user","content":prompt}])
+            response = ollama.chat(model="mistral", messages=[{"role":"user","content":prompt}])
             answer = response["message"]["content"]
             st.write(answer)
             with st.expander("Sources consulted"):
